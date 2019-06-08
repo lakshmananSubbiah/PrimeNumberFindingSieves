@@ -6,13 +6,16 @@ import java.io.InputStreamReader;
 import java.util.BitSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class SundaramSieve {
 
+	private static Logger logger = Logger.getLogger(SundaramSieve.class.getName());
 	
 	public static void main(String[] args) {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		/** Receiving Input upto which prime numbers has to be found **/
 		
@@ -23,10 +26,10 @@ public class SundaramSieve {
 			System.out.println(primeNumbers.size());
 			System.out.println(primeNumbers);
 		} catch (NumberFormatException e) {
-			
+			logger.log(Level.SEVERE, "Number Format Exception -- Input reception Exception");
 			e.printStackTrace();
 		} catch (IOException e) {
-		
+			logger.log(Level.SEVERE, "IO Exception - Input reception Exception");
 			e.printStackTrace();
 		}
 		
