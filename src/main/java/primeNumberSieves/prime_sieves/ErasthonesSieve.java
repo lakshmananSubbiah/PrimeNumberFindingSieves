@@ -19,7 +19,9 @@ public class ErasthonesSieve {
 		System.out.println("Enter the finite number of length");
 		try {
 			int finiteLength = Integer.parseInt(br.readLine());
+			Long time = System.nanoTime();
 			Set<Integer> primeNumbers = findPrimes(finiteLength);
+			System.out.println("The time captured : "+(System.nanoTime()-time)+" ns");
 			System.out.print(primeNumbers);
 		} catch (NumberFormatException e) {
 			logger.log(Level.SEVERE, "Number Format Exception -- Buffered Reader Input issue");
