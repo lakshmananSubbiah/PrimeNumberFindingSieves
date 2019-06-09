@@ -20,6 +20,7 @@ public class AtkinSieve {
 			Integer finiteLength = Integer.parseInt(br.readLine());
 			Long time = System.nanoTime();
 			Set<Integer> primeNumbers = findPrimes(finiteLength);
+			System.out.println("Atkins Sieve");
 			System.out.println("The time captured : "+(System.nanoTime()-time)+" ns");
 			System.out.println(primeNumbers);
 		} catch (NumberFormatException e) {

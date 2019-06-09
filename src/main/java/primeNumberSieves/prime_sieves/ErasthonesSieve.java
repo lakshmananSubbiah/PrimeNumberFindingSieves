@@ -21,6 +21,7 @@ public class ErasthonesSieve {
 			int finiteLength = Integer.parseInt(br.readLine());
 			Long time = System.nanoTime();
 			Set<Integer> primeNumbers = findPrimes(finiteLength);
+			System.out.println("Eratosthenes Sieve");
 			System.out.println("The time captured : "+(System.nanoTime()-time)+" ns");
 			System.out.print(primeNumbers);
 		} catch (NumberFormatException e) {
